@@ -1,11 +1,15 @@
-==============================================================
-The Theme was Resigned from scratch
-The Documentation is out of date
+# Dayo is a Theme for Ghost Blogging Platform
 
-But the theme worksas expected. Download it and add it to your
-themes folder (ghost/content/themes) and it will work just fine
-===============================================================
+## The Theme Documentation is out of date as it was completely re-designed.
+## However the theme is complete and works as expected, to run it do the following
 
+* Download this repository or clone it
+* Add it to your themes folder in ghost/content/themes
+* Run your Ghost-Blog and in setting activate the theme named "Dayo"
+
+
+
+***
 
 ###Welcome to Dayo theme help document, here you will find all the instructions you need to use the theme
 
