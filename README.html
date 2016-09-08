@@ -1,0 +1,194 @@
+<h3 id="welcome-to-dayo-theme-help-document-here-you-will-find-all-the-instructions-you-need-to-use-the-theme">Welcome to Dayo theme help document, here you will find all the instructions you need to use the theme</h3>
+<h3 id="theme-details">Theme Details</h3>
+<ul>
+<li><strong>Version : 1.0.0</strong></li>
+<li><strong>Date of Release : 30/6/2016</strong></li>
+</ul>
+<p>Please note that incase of any help you can always reach out to me via my website ,email or twitter</p>
+<ul>
+<li>email : namankamran@gmail.com</li>
+<li>website : <a href="https://namankamra.com">namankamra.com</a></li>
+<li>twitter : <span class="citation">[@namkam5]</span>(http://twitter.com/namkam5)</li>
+</ul>
+<h3 id="the-documentation-is-divided-into-4-main-points-for-ease-of-understanding.">The documentation is divided into 4 main points for ease of understanding.</h3>
+<p>which may further be divided into sub points.</p>
+<ol style="list-style-type: decimal">
+<li>Installation and setup</li>
+<li>html/hbs file structure</li>
+<li>CSS features and customizations</li>
+<li>Understanding ghost template code.</li>
+<li>3rd party Resources used</li>
+</ol>
+<hr />
+<h2 id="before-you-start-with-the-installation-and-setup-there-are-2-possibilities.">Before you start with the installation and setup there are 2 possibilities.</h2>
+<p>please choose which one is yours and proceed as given below</p>
+<ul>
+<li>A. You are using ghost(pro) for your blog</li>
+<li>B. You are Hosting ghost on your own server</li>
+</ul>
+<h3 id="a.-you-are-using-ghostpro-for-your-blog">A. You are using ghost(pro) for your blog</h3>
+<h2 id="installation-and-setup">1. Installation and Setup</h2>
+<p>Step 1. Go to your ghost settings which will be at the following url {your blog url}/ghost and click on upload a new theme</p>
+<blockquote>
+<p>Here upload the ZIP file of the theme NOT the unzipped folder.</p>
+</blockquote>
+<p>** CONGRATULATIONS !** Your theme is now installed and you can view your ghost blog with the newly installed theme</p>
+<p>However I highly recommend that you read below on how to customize it to look exactly like how you want your blog to look and remove the dayo branding throughout to replace with your own brand.</p>
+<h3 id="b.-you-are-hosting-ghost-on-your-own-server">B. You are hosting ghost on your own server</h3>
+<h2 id="installation-and-setup-1">1. Installation and setup</h2>
+<p><strong>Step 1.</strong> Go to your ghost installation folder and paste the UNZIPPED theme folder in the following ghost installation directory (your ghost version number might be different)</p>
+<pre><code>    ghost-0.8.0/content/themes/{paste here}</code></pre>
+<p>** Step 2.** Go to your ghost settings which will usually be at the following url {your-blog-url}/ghost this is where you setup your ghost after installation</p>
+<p><strong>Step 3.</strong> Here under Settings &gt; general you will find a theme option below here in the drop down menu you will find the theme named dayo</p>
+<p><strong>Step 4.</strong> Select it and click on save on the top right hand corner</p>
+<p>** CONGRATULATIONS !** Your theme is now installed you can now view your blog in the new theme.</p>
+<p>However I highly recommend that you read below on how to customize it to look exactly like how you want your blog to look and remove the dayo branding throughout to replace with your own brand.</p>
+<h2 id="html-hbs-file-structure">2. HTML / hbs file structure</h2>
+<p>The theme uses google's material design lite library <a href="http://getmdl.io">Material Design Lite</a></p>
+<p>First let me explain what each and every file is doing in the theme. I will then guide you through some basic configuration that you must do on every page to make the theme suit your needs</p>
+<p><strong>default.hbs</strong> : This the skeleton of the theme. The parts of the theme that are present on every page are included here like the top navigation menu or the navigation drawer that pops out in mobile devices.</p>
+<p><strong>index.hbs</strong> : This is the main posts page where all your posts are seen you can edit how each and every element looks here</p>
+<p><strong>page.hbs</strong> : This is the default layout for every static page that you make in ghost. you can customize things here like if you want to remove the header add commenting or remove commenting.</p>
+<p><strong>page-features.hbs</strong> : This contains the code to modify any individual page. so if you have static page called features you can make a new file called page-{your-page-name} and then that particular page can have its own unique styling</p>
+<p><strong>post.hbs</strong> : This page contains how an individual post looks likes. Here you can edit things like what your posts should contain. eg: you want the tags to display at the end of each post or not etc.</p>
+<p><strong>header.hbs</strong> : This is the header part of your theme where your blog title is displayed along with the blog description and an email form. Here you can accept upto 1000 emails per month using the formspree services <a href="http://formspree.io">fromspree.io</a> which I will explain how to configure.</p>
+<h3 id="default.hbs">Default.hbs</h3>
+<p>Here you would want to change a few things</p>
+<ul>
+<li><p>The title of your blog in the navigation menu. This title is commented out as &quot;Title&quot; the default.hbs file so you can change it to the name of your blog.</p></li>
+<li><p>The navigation items. These are commented out as &quot;Navigation&quot;. you can change the options in the navigation menu.</p>
+<p>Please make sure to change the navigation menu options in both the desktop and mobile versions they are commented out respectively.</p></li>
+<li><p>The footer text. You can change the footer text to suit your needs. Its is very evident once you open the default.hbs file.</p></li>
+</ul>
+<h3 id="index.hbs">index.hbs</h3>
+<p>Here you might want to change a few things as well</p>
+<ul>
+<li>The main header. You can comment out the header if you don't want it to display on your home page like this .</li>
+</ul>
+<blockquote>
+<p>Change the second line of the file from</p>
+</blockquote>
+<pre><code>{{&gt; header}} --------&gt; {{!&gt; header}}</code></pre>
+<p>adding an exclamation in front just comments out the header and hence won't be seen on your blog. You can do the same on every page.</p>
+<ul>
+<li><p>The tags. If you don't want the tags to show after every post . you can comment the part between {{#if tags}} and {{/if}}</p>
+<p>similarly you can comment out whatever part you don't want in your blog</p></li>
+<li><p>The social icons.. I have provided support for 8 sociall icons however if you want to add more or different you can always reach out to me I will get back to you asap.</p></li>
+</ul>
+<blockquote>
+<p>here you can comment out the social icons you don't want and let the ones you want remain this page is also heavily commented to help you understand what each and every social icon is doing.</p>
+</blockquote>
+<ul>
+<li>The categories. There is a categories box under the social icon box. You can change the categories here It is recommended that these categories be the tags that you may create in your ghost blog.</li>
+</ul>
+<blockquote>
+<p>so to add a catagory you can do the following in the index.hbs file eg:</p>
+</blockquote>
+<pre><code>&lt;li&gt;  &lt;a href=&quot;{{@blog.url}}/tag/{{your-tag-name}}&quot;class=&quot;catlist&quot;&gt; {{your-tag-name}} &lt;/a&gt;&lt;br /&gt; &lt;/li&gt;</code></pre>
+<p>you can add the following line to add as many tags as you want to your theme.</p>
+<p>5 . The Box four contains random text. you can add whatever you want to write over here. you can even comment out the whole box if you want to remove this box from your own theme. &gt;</p>
+<p><strong>PLEASE MAKE SURE THAT WHATEVER CHANGES YOU MAKE, YOU MAKE IT ON BOTH THE WEB AND MOBILE VERSION ... THE MOBILE VERSION IS RIGHT BELOW THE WEB VERSION UNDER &quot;small screen layout&quot;</strong></p>
+<h3 id="page.hbs">page.hbs</h3>
+<p>This file shows the template of the static pages and can have lot of variations the following are the variations that you can have for the this page.</p>
+<ul>
+<li>Static page with header</li>
+<li>Static page without header</li>
+</ul>
+<blockquote>
+<p>and for both the above variations you can have the following</p>
+</blockquote>
+<ul>
+<li>Static page with sidebar and comments</li>
+<li>Static page no sidebar and comments</li>
+<li>Static page with side bar no comments</li>
+<li>Static page no sidebar no comments</li>
+</ul>
+<p>** The variations can be done as follows **</p>
+<blockquote>
+<p>By default every static page will show as with sidebar and no comments</p>
+</blockquote>
+<ul>
+<li>The page-features contains code to show a static page as</li>
+</ul>
+<blockquote>
+<p>no sidebar with comments so if you want to have your page with sidebar and no comments</p>
+</blockquote>
+<p>you can make a new file and name it ** **</p>
+<pre><code>page-{{yourpagename.hbs}}</code></pre>
+<p>then paste the code from there into this new page</p>
+<ul>
+<li><p>Like wise if you want to remove comments from any of these pages just comment out the div that says ** **</p>
+<div id="disqus_thread">
+
+</div>
+<p>and then your commenting system won't load.</p></li>
+</ul>
+<p><strong>ONCE AGAIN PLEASE REMEMBER TO MAKE CHANGES IN BOTH THE PLACES TO MAINTAIN UNIFORMITY, THE MOBILE VERSION OF YOUR WEBSITE WILL BE UNDER THE COMMENT &quot;mobile screen div&quot;</strong></p>
+<h3 id="post.hbs">post.hbs</h3>
+<p>This page contains how every post looks like. The only things you would want to change here is the commenting system and the header part ie if you want to keep a header or not.</p>
+<ul>
+<li><p>The main header. You can comment out the header if you don't want it to display on your individual posts like this . Change the second line of the file from ** **</p>
+<p>{{&gt; header}} --------&gt; {{!&gt; header}}</p></li>
+</ul>
+<p>adding an exclamation in front just comments out the header and hence won't be seen on your blog.</p>
+<ul>
+<li>Like wise if you want to remove comments from any of these pages just comment out the div that says ** **
+<div id="disqus_thread">
+
+</div></li>
+</ul>
+<p>and then your commenting system won't load.</p>
+<p><strong>ONCE AGAIN PLEASE REMEMBER TO MAKE CHANGES IN BOTH THE PLACES TO MAINTAIN UNIFORMITY THE MOBILE VERSION OF YOUR WEBSITE WILL BE UNDER the comment &quot;mobile screen div&quot;</strong></p>
+<h3 id="header.hbs">header.hbs</h3>
+<p>This page displays the header where the title and the description of your blog go.</p>
+<blockquote>
+<p>You can recieve upto 1000 emails every month using a service called <a href="http://formspree.io">formspree</a></p>
+</blockquote>
+<p>Here's how to configure formspree</p>
+<pre><code>&lt;form id=&quot;emailfield&quot; action=&quot;https://formspree.io/your@email.com&quot;
+  method=&quot;POST&quot;&gt;
+&lt;div class=&quot;mdl-textfield mdl-js-textfield&quot;&gt;
+&lt;input class=&quot;mdl-textfield__input&quot; type=&quot;email&quot; name =&quot;_replyto&quot; id=&quot;sample1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;_next&quot; value=&quot;//site.io/thanks.html&quot; /&gt;
+&lt;label style=&quot;text-align:center&quot;class=&quot;mdl-textfield__label&quot; for=&quot;sample1&quot;&gt;Enter your Email&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+<p>Here where it says <strong><em>your@email.com</em></strong> replace it with your email id..</p>
+<p>Also where it says <strong><em>site.io/thanks.html</em></strong> replace it will with the url you want the people to go to after submitting the form.</p>
+<p>THATS IT! YOU'RE DONE! . now the first time someone enters an email you will receive verification and after that you will get an email with whoever signed up for your website.</p>
+<h2 id="css-file-structure">3. CSS File structure</h2>
+<p>The theme has just one CSS file <em>&quot;styles.css&quot;</em> which styles all the pages.</p>
+<blockquote>
+<p>This file is heavily commented to let you know what each and every component is doing for eg:</p>
+</blockquote>
+<p>If you want to change the color of your header you can change the following code</p>
+<pre><code>This is will change the color of the header where the navigation options are present
+
+#top-header{
+     background-color: {your-favorite-color};
+}
+
+this changes the color of the header where your title and blog description are present
+
+.header_uber{
+     background-color: {your-favorite color};
+     margin-top:-2em;
+     height: 300px;
+ }</code></pre>
+<h2 id="understanding-ghost-templating-language">4. Understanding Ghost templating language</h2>
+<p>If you didn't know before the parts in the code where i have inserted things inside double curly brackets is where ghost plugs in its own code to display the content</p>
+<p>the templating language that ghosts uses with double brackets is called handlebars you can visit their website here <a href="http://handlebarsjs.com/">Handlebars</a></p>
+<p>If you want a further understanding on how what ghost is inserting where you can checkout their documentation at<br /><a href="http://themes.ghost.org/">Ghost Documentation</a></p>
+<h2 id="third-party-resources-used">5. Third Party Resources used</h2>
+<p>All the resources used are open source and provide MIT Licence and hence do not infringe any copyrights.</p>
+<p><a href="http://getmdl.io">Material Design Lite</a>: This is a library of web components developed by Google</p>
+<p><a href="http://fontawesome.io/">Font Awesome</a> : This is a resource for providing icons and fonts</p>
+<p><a href="http://fonts.google.com">Google Fonts</a>: This is a font library provided by Google</p>
+<p><a href="http://formspree.io">Formspree</a>: This is an application that allows us to recieve form submissions on our website.</p>
+<h2 id="thank-you">Thank You</h2>
+<p>Thank you for purchasing the Dayo theme. If you liked it please leave a rating on the envato theme page.</p>
+<p>Also just to remind you, if anything was not covered here feel free to reach me at.</p>
+<ul>
+<li>email : namankamran@gmail.com</li>
+<li>website : <a href="https://namankamra.com">namankamra.com</a></li>
+<li>twitter : <span class="citation">[@namkam5]</span>(http://twitter.com/namkam5)</li>
+</ul>

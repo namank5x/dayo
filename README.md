@@ -1,3 +1,12 @@
+==============================================================
+The Theme was Resigned from scratch
+The Documentation is out of date
+
+But the theme worksas expected. Download it and add it to your
+themes folder (ghost/content/themes) and it will work just fine
+===============================================================
+
+
 ###Welcome to Dayo theme help document, here you will find all the instructions you need to use the theme
 
 ###Theme Details

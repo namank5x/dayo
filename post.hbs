@@ -1,0 +1,32 @@
+{{!< default}}
+{{!> header}}
+{{#post}}
+
+<div class="post-container">
+
+    <div class="row">
+    
+    <div class="twelve columns">
+        <div class="post-page-heading">
+            
+           <h4> {{title}} </h4>
+           <hr />
+        </div>
+        {{#if image}}
+        <div class="post-page-image">
+            <img src="{{image}}">
+            <hr />
+        </div>
+        {{/if}}
+    <div class="post-page-content">
+        <article class="markdown-body">
+            {{content}}
+        </article>
+    </div>
+    
+
+    </div>
+  </div>
+
+</div>
+{{/post}}
