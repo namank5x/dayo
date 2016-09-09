@@ -329,6 +329,24 @@ textarea {
 .sidebar-text{
     font-family: 'Merriweather',sans-serif;
     font-size: 18px;
+    margin-bottom:30px;
+}
+
+.sidebar-image{
+    margin-bottom: 25px;
+}
+
+.sidebar-image img{
+    border-radius: 50%;
+    width:50%;
+}
+
+.sidebar-form input{
+    font-family: 'Lato',sans-serif;
+}
+
+.sidebar-form .email-input{
+    margin-bottom:30px;
 }
 
 .post-box{
