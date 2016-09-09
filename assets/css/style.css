@@ -317,12 +317,18 @@ textarea {
     margin-bottom: 35px;
     text-align: center;
     color: #565656;
-    font-family: 'Lato',sans-serif;
+    
     
 }
 
 .sidebar-box h6{
     font-weight: 300;
+    font-family: 'Lato',sans-serif;
+}
+
+.sidebar-text{
+    font-family: 'Merriweather',sans-serif;
+    font-size: 18px;
 }
 
 .post-box{
