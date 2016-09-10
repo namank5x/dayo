@@ -7,7 +7,8 @@
 * Add it to your themes folder in ghost/content/themes
 * Run your Ghost-Blog and in setting activate the theme named "Dayo"
 
-
+## You can view the demo below :
+## [Demo](https://theschooloftech.com)
 
 ***
 
