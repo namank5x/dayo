@@ -100,13 +100,13 @@ textarea {
    .navbar{
        width: 100%;
        height: 100px;
-       background-color: #fff;
+       background-color: #1abc9c;
        font-family: 'Lato',sans-serif;
        border-bottom: 2px solid #1abc9c;
    }
 
    .nav-container{
-       max-width: 960px;
+       max-width: 1120px;
        margin:0 auto;
    }
 
@@ -128,7 +128,7 @@ textarea {
 
    .ul-navbar li a{
        display: block;
-       color: #565656;
+       color: #fff;
        text-decoration: none;
        padding: 25px 12px;
        font-weight: bold;
@@ -136,9 +136,11 @@ textarea {
    }
 
    .ul-navbar li a:hover{
-       color: #1abc9c;
+       text-underline-position: 2px;
+       text-decoration: underline;
    }
 
+   
 /* ===========================*/
 
    .nav-menu-responsive{
@@ -257,8 +259,12 @@ textarea {
        text-decoration: none;
        font-size: 1em;
        padding: 25px 12px;
-       font-weight: bold;
+       font-weight: 400;
        font-size: 0.75em;
+   }
+
+   .ul-footer li a:hover{
+       color: #1abc9c;
    }
 
    .meta-footer p{
@@ -307,8 +313,12 @@ textarea {
   ======================================================*/
 
 .index-container{
-    max-width: 960px;
+    max-width: 1120px;
     margin: 0 auto;
+}
+
+.row{
+    margin-top:30px;
 }
 
 .sidebar-box{
@@ -388,7 +398,7 @@ textarea {
    padding:10px;
    margin-bottom:10px;
    font-weight: bold;
-   font-family: 'Merriweather',sans-serif;
+   font-family: 'Lato',sans-serif;
 }
 
 .post-title a{
@@ -398,7 +408,7 @@ textarea {
 }
 
 .post-title a:hover{
-    border-bottom: 2px solid #1abc9c;
+    color: #1abc9c;
 } 
 
 .post-excerpt{
@@ -430,7 +440,12 @@ textarea {
            margin-left: 5px;
            margin-right: 5px;
        }
+
+       .row{
+           margin: 0px;
+       }
 }
+
 
  
 /*==============================================
@@ -440,8 +455,10 @@ textarea {
   .post-container{
       max-width: 800px;
       margin:0 auto;
+      color: #565656;
       font-family: 'Merriweather',sans-serif;
   }
+  
 
   .post-page-heading{
       font-family: 'Lato',sans-serif;
@@ -462,10 +479,57 @@ textarea {
       margin: 10px;
   }
 
+  .post-author-meta{
+      font-size:18px;
+      
+  }
+
+  .post-author-meta a{
+      text-decoration: none;
+      color: #384f66;
+      border-bottom: 1px solid #bdc3c7;
+  }
+
+  .post-author-meta a:hover{
+      color: #1abc9c;
+  }
+
+  .post-author-meta-image{
+      float: left;
+      margin-right:20px;
+      margin-bottom:3px;
+  }
+
+  .post-author-meta img{
+      border-radius: 50%;
+      width:110px;
+      
+  }
+
+  .post-form{
+      text-align: center;
+  }
+
+  .post-form p{
+      font-size: 14px;
+  }
+
+  .post-comments{
+      margin-bottom:30px;
+  }
+
   @media screen and (max-width: 480px) {
        
        .post-page-heading{
            margin-top:20px;
+       }
+       .row{
+           margin: 0px;
+       }
+
+       .post-author-meta,.post-comments,.post-form{
+           margin: 10px;
+           margin-bottom:30px;
        }
 }
 

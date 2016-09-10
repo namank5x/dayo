@@ -23,10 +23,60 @@
             {{content}}
         </article>
     </div>
-    
+    <hr />
+    <div class="post-author-meta">
+        {{#author}}
+            <div class="post-author-meta-image">
+                 <img src="{{image}}" alt="{{name}}'s Picture" />                    
+            </div>  
+           <div class="post-author-meta-bio"> 
+                {{#if bio}}{{bio}}{{/if}}         
+           </div>
+           <div class="post-author-meta-social">
+                {{#if twitter}}<a href="{{twitter_url}}" target="_blank">Twitter</a>{{/if}} 
+                {{#if facebook}}| <a href="{{facebook_url}}" target="_blank">Facebook</a>{{/if}}
+                {{#if website}}| <a href="{{website}}" target="_blank"> Website </a>{{/if}}
+           </div>
+        {{/author}}
+    </div> 
+    <hr />
+
+   <div class="post-form">
+       <h6> Subscribe for weekly updates  </h6>
+        <!-- Begin MailChimp Signup Form -->
+
+         <!-- ===============================================================
+                    Enter your mailchimp "Naked Form Here"
+              =============================================================== -->           
+
+         <!--End mc_embed_signup-->
+                <p> Yeah I hate spam too, you'll get none of it I promise </p>
+    </div>
+    <hr />
+
+    <div class="post-comments">
+        <div id="disqus_thread"></div>
+            <script>
+
+            /**
+             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+
+            var disqus_config = function () {
+                this.page.url = '{{url absolute="true"}}';  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = 'ghost-{{id}}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = '<//your-website-name>.disqus.com/embed.js'; 
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+            </script>
+    </div>
 
     </div>
   </div>
-
 </div>
 {{/post}}
