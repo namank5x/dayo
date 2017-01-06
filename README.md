@@ -5,4 +5,4 @@
 * Run your Ghost-Blog and in setting activate the theme named "Dayo"
 
 ## You can view the demo below :
-## [Demo](https://dayodemo.herokuapp.com)
+## [Demo](https://dayodemo.azurewebsites.net)
